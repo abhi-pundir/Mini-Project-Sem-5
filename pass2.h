@@ -122,4 +122,13 @@ void object_pro()
 
     fp1=fopen("output.txt","r");
     fp2=fopen("objectprogram.txt","w");
+
+
+    fscanf(fp1,"%s %s %X",&pro_name,&opcode,&start_add);
+    fprintf(fp2,"H ^ %s ^ %06X ^ %X",pro_name,start_add,prog_size);
+
+    while(start_add<=start_add+prog_size)
+    {
+        fscanf(fp1,"%s %s %X",&pro_name,&opcode,&start_add);
+    }
 }
