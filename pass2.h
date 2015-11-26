@@ -129,14 +129,18 @@ void object_pro()
 
     while(!feof(fp1))
     {
+        size=0;
         fscanf(fp1,"%s %s %X",&pro_name,&opcode,&start_add);
         if(strcmp(instruct,"-")==0)
             {
                 break;
+
             }
             else
             {
+                 size=size+(strlen(instruct)/2);
                 fprintf(fp3,"^ %s ",instruct);
             }
+            fclose(fp3);
     }
 }
