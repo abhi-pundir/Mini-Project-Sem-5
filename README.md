@@ -1,9 +1,12 @@
 # Mini-Project-Sem-5
 
+Question No.3
+This program works as an assembler for performing the conversion of assembly into machine code.
+
+
+
 The programs starts with "mainprogram.c".
 It imports 2 header files pass1.h and pass2.h.
-
-
 
 The program reads an "input.txt" file.
 "Optab.txt" stores the various operands used in the program, along with size of each operand and their hexadecimal code.
