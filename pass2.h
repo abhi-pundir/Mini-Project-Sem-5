@@ -110,3 +110,16 @@ void pass_2()
     printf("Output.txt file generated\n");
 }
 
+
+
+void object_pro()
+{
+    int start_add, text_add, size=0,locctr;
+    int check,length;
+    char pro_name[20], opcode[20],count[20],label[20],instruct[20],temp[20];
+
+    FILE *fp1,*fp2,*fp3;
+
+    fp1=fopen("output.txt","r");
+    fp2=fopen("objectprogram.txt","w");
+}
