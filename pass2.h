@@ -112,6 +112,8 @@ void pass_2()
 
 
 
+
+
 void object_pro()
 {
     int start_add, text_add, size=0,locctr;
@@ -178,7 +180,7 @@ void object_pro()
                 if(strcmp(temp,"endline")==0)
                 {
                     break;
-                }`
+                }
                 fprintf(fp2," %s ",temp);
             }
             fclose(fp3);

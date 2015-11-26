@@ -112,4 +112,7 @@ int pass_1()
     fprintf(fp4,"%X\t%s\t%s\t%s\n",locctr,label,opcode,count);
     fclose(fp4);
     fclose(fp1);
+
+    printf("Intermediate.txt file generated\n");
+    printf("Pass 1 completed\n");
 }
