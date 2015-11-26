@@ -130,5 +130,13 @@ void object_pro()
     while(start_add<=start_add+prog_size)
     {
         fscanf(fp1,"%s %s %X",&pro_name,&opcode,&start_add);
+        if(strcmp(instruct,"-")==0)
+            {
+                break;
+            }
+            else
+            {
+                fprintf(fp3,"^ %s ",instruct);
+            }
     }
 }
