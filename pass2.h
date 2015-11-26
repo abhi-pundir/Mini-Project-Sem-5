@@ -178,7 +178,7 @@ void object_pro()
                 if(strcmp(temp,"endline")==0)
                 {
                     break;
-                }
+                }`
                 fprintf(fp2," %s ",temp);
             }
             fclose(fp3);
@@ -189,8 +189,10 @@ void object_pro()
     }
 
 
+    fprintf(fp2,"\nE ^ %06X",start_add);
 
+    fclose(fp2);
 
-
-
+printf("Objectprogram.txt file generated\n");
+printf("Pass 2 completed\n");
 }
