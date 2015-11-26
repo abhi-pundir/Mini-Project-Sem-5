@@ -129,18 +129,68 @@ void object_pro()
 
     while(!feof(fp1))
     {
+
         size=0;
-        fscanf(fp1,"%s %s %X",&pro_name,&opcode,&start_add);
-        if(strcmp(instruct,"-")==0)
+        fp3=fopen("temp.txt","w");
+        while(size<=30)
+        {
+
+            /*if((strcmp(opcode,RESB)==0) || (strcmp(opcode,RESB)==0))
             {
                 break;
+            }
+            */
 
+            fscanf(fp1,"%X %s %s %s %s",&locctr,&label,&opcode,&count,&instruct);
+
+            if(strcmp(instruct,"-")==0)
+            {
+                break;
             }
             else
             {
-                 size=size+(strlen(instruct)/2);
+                if(size==0)
+                {
+                    text_add=locctr;
+                }
+                size=size+(strlen(instruct)/2);
                 fprintf(fp3,"^ %s ",instruct);
             }
+
+
+        }
+
+
+        fprintf(fp3,"endline");
+        fclose(fp3);
+
+
+        if(size>0)
+        {
+
+            fprintf(fp2,"\nT ^ %06X ^ %02X",text_add,size);
+
+            fp3=fopen("temp.txt","r");
+            while(!feof(fp3))
+            {
+
+                fscanf(fp3,"%s",&temp);
+                if(strcmp(temp,"endline")==0)
+                {
+                    break;
+                }
+                fprintf(fp2," %s ",temp);
+            }
             fclose(fp3);
+
+        }
+
+
     }
+
+
+
+
+
+
 }
