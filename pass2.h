@@ -127,7 +127,7 @@ void object_pro()
     fscanf(fp1,"%s %s %X",&pro_name,&opcode,&start_add);
     fprintf(fp2,"H ^ %s ^ %06X ^ %X",pro_name,start_add,prog_size);
 
-    while(start_add<=start_add+prog_size)
+    while(!feof(fp1))
     {
         fscanf(fp1,"%s %s %X",&pro_name,&opcode,&start_add);
         if(strcmp(instruct,"-")==0)
