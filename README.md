@@ -1,9 +1,6 @@
-# Mini-Project-Sem-5
+# SIC-Machine
 
-Question No.3
-This program works as an assembler for performing the conversion of assembly into machine code.
-
-
+Implementation of SIC Machine Architecture for  conversion of assembly into machine code.
 
 The programs starts with "mainprogram.c".
 It imports 2 header files pass1.h and pass2.h.
